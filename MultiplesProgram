@@ -1,3 +1,9 @@
+/*
+This program asks the user to input a number and then it says whether the number is
+a multiple of five or two.
+*/
+
+
 import java.util.Scanner;
   
 public class Welcome {
