@@ -1,0 +1,41 @@
+/*
+This program asks the user to enter their weight in pounds and their hieght in inches. After that the
+program converts each of them to kilograms and meters respectively. Finally it then tells the user
+their bodymass and says if they are overweight,underweight,obese, or normal.
+*/
+
+import  java.util. Scanner;
+
+public class Welcome {
+        public static void main(String[]args){
+           
+            Scanner input = new Scanner(System.in);
+            
+        System.out.print("Enter your weight in pounds");
+            int bodymasspounds= input.nextInt();
+        
+       System.out.print("Enter your height in inches");
+       int heightinches= input.nextInt();
+       
+       final double kilograms= 0.45359237;
+       final double meters=0.0254;
+       
+       double weight= bodymasspounds * kilograms;
+       double height= heightinches* meters;
+       
+      double BMI= (weight)/(height*height);
+       
+      if (BMI>=30){
+          System.out.println("Obese");
+      }
+      else if(BMI>=25){
+          System.out.println("Overweight");         
+      }
+      else if(BMI>=18.5){
+          System.out.println("Normal");
+      }
+      else if(BMI<18.5){
+          System.out.println("Underweight");
+      }                  
+        }
+}    
