@@ -1,4 +1,6 @@
-
+/*
+This program lets the user answer two question until they get it correct
+*/
 import java.util.Scanner;
 
 public class Welcome{
