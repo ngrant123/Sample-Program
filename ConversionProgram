@@ -1,0 +1,104 @@
+/*
+This program asks the user to pick which conversion
+they want to make and then asks them the information
+that they want to convert. For example if the user were
+to pick 'A', the program would  ask them the quantity in
+pounds and then it would print out the conversion. 
+*/
+
+import java.util.Scanner;
+
+public class Lab5{
+    public static void main(String[]args){
+        Scanner input=new Scanner(System.in);
+        double poundsToKilos;
+        
+        menu(1);      
+        
+    }
+    public static void menu(int p){
+        Scanner input=new Scanner(System.in);
+        
+          String questions= "A - convert pounds to kilos\n"+
+                          "B - convert kilos to pounds\n"+
+                          "C - convert kilometers to miles\n"+
+                          "D - convert miles to kilometers\n"+
+                          "E - exit";
+        
+        System.out.print(questions);
+         System.out.println("\nEnter the option you want to choose");
+         String choice=input.next();
+         
+        
+        switch(choice){
+            case "A":
+                
+         System.out.println("Enter a quantity in pounds");
+        int pounds=input.nextInt();
+                poundsToKilos(pounds);
+                break;
+                
+            case "B":
+                
+         System.out.print("Enter a quantity in kilos");
+        int kilometers= input.nextInt();
+        
+                kilosToPounds(kilometers);
+                break;
+                
+            case "C":
+                
+        System.out.print("Enter a quantity in kilometers");
+        int kilos=input.nextInt();
+        
+        
+        kmToM(kilos);
+                break;
+                
+            case "D":
+                
+             System.out.print("Enter a quantity in miles");
+             int miles=input.nextInt();
+        
+                
+                MToKm(miles);
+                break;
+                
+        }
+        
+        
+    }
+    public static double poundsToKilos(double pounds){
+        double kilos= pounds/2.2;
+        
+        System.out.println(pounds+"pounds in kilos is "+kilos);
+        
+        return kilos;
+    }
+    public static double kilosToPounds(double pounds){
+        double kilos=pounds*2.2;
+        
+        System.out.println(kilos+" kilograms in "+pounds+"pounds");
+        
+        return pounds;
+    }
+    public static double kmToM(int kilometers){
+        
+        double meters= kilometers*(1.60934);
+        
+        System.out.println(kilometers+" kilometers is "+meters+" meters");
+        
+        return kilometers;
+        
+    }
+    public static double MToKm(int miles){
+        
+        double kilometers= miles*(.621371);
+        
+        System.out.println( miles+" miles is "+ kilometers+" kilometers");
+        
+        return miles;
+        
+    }
+    
+}
